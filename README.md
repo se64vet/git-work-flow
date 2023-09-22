@@ -25,3 +25,22 @@
     - fix code and commit with issue id
     - merge back to Master or Dev to further fix
     
+## Git rebase vs merge
+- Merge can be used for small team and small project
+- Rebase suits large project with team >2 mates
+
+- Merge preserve log history while Rebase alter it.
+    - rebase will organize commits of target branch on top.
+- Merge will add extra commit to a branch while rebase dont
+
+![Illustration img](image.png)
+
+## Cherry-pick and git stash
+- Cherry-pick allow leader to release a specific task to production
+    - instead of merging all commits to master branch, leader can choose what feature should be public today
+
+- Git Stash allow dev to store the WIP without commit to branch.
+    - convenient and preserve clean git log
+
+- Git reset --soft :commitId allow dev to delete some unwanted commit but keep the code at current stage
+- Use git commit --amend -m "" to re-write just posted commit.
